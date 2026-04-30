@@ -1,0 +1,88 @@
+import pandas as pd
+import joblib
+from sklearn.metrics import confusion_matrix, classification_report, accuracy_score
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+import os
+
+# 1. List of evaluation datasets
+eval_files = [
+    '/home/zainab/Desktop/My_Project_Zainab/Jamming_With_Lower_Power/Master_0_Data.csv',
+    '/home/zainab/Desktop/My_Project_Zainab/Jamming_With_Lower_Power/Master_3_Data.csv',
+    '/home/zainab/Desktop/My_Project_Zainab/Jamming_With_Lower_Power/Master_6_Data.csv',
+    '/home/zainab/Desktop/My_Project_Zainab/Jamming_With_Lower_Power/Master_9_Data.csv',
+    '/home/zainab/Desktop/My_Project_Zainab/SamePower/Master_SamePower_Data.csv',
+    '/home/zainab/Desktop/My_Project_Zainab/Jamming_With_Higher_Power/Master_15_Data.csv',
+    '/home/zainab/Desktop/My_Project_Zainab/Jamming_With_Higher_Power/Master_18_Data.csv',
+    '/home/zainab/Desktop/My_Project_Zainab/Jamming_With_Higher_Power/Master_21_Data.csv',
+    '/home/zainab/Desktop/My_Project_Zainab/Jamming_With_Higher_Power/Master_24_Data.csv'
+]
+# 2. Load trained model
+model_filename = '/home/zainab/Desktop/My_Project_Zainab/jamming_decision_tree_model.pkl'
+clf = joblib.load(model_filename)
+
+
+
+# 4. Loop through each evaluation dataset
+for file in eval_files:
+    print(f"\nEvaluating dataset: {file}")
+
+    # Load evaluation data
+    eval_data = pd.read_csv(file)
+
+    # Prepare features and labels
+    X_eval = eval_data.drop(columns=['Label', 'Trace'])
+    y_true = eval_data['Label']
+    # 3. Class labels
+    labels = sorted(y_true.unique())
+
+    # Predict
+    y_pred = clf.predict(X_eval)
+
+    # Accuracy
+    acc = accuracy_score(y_true, y_pred)
+    print(f"Accuracy: {acc * 100:.2f}%")
+
+   # --- CONFUSION MATRIX (BIG, ITALIC, & ROTATED) ---
+    cm = confusion_matrix(y_true, y_pred, labels=labels)
+
+    plt.figure(figsize=(8, 8)) # Slightly larger width to accommodate labels
+    
+    sns.heatmap(
+        cm,
+        annot=True,
+        fmt='d',
+        cmap='Blues',
+        xticklabels=labels,
+        yticklabels=labels,
+        # Inside numbers: Big and Bold
+        annot_kws={"size": 22, "weight": "bold"}, 
+        cbar=False
+    )
+    
+    # x-axis labels: Big, Bold, Italic, and Rotated 45 degrees to prevent overlap
+    plt.xticks(fontsize=18, fontweight='bold', fontstyle='italic', rotation=45, ha='right')
+    
+    # y-axis labels: Big, Bold, Italic
+    plt.yticks(fontsize=18, fontweight='bold', fontstyle='italic', rotation=0)
+    
+    plt.xlabel('Predicted Label', fontsize=20, fontweight='bold')
+    plt.ylabel('True Label', fontsize=20, fontweight='bold')
+    
+    plt.tight_layout()
+    plt.savefig(f'/home/zainab/Desktop/My_Project_Zainab/Result2/confusion_matrix_{os.path.basename(file)}.png', 
+                dpi=300, 
+                bbox_inches='tight')
+    plt.close()
+    # --- CLASSIFICATION REPORT ---
+    report_dict = classification_report(y_true, y_pred, target_names=labels, output_dict=True)
+    report_df = pd.DataFrame(report_dict).iloc[:-1, :].T
+
+    plt.figure(figsize=(10, 5))
+    sns.heatmap(report_df, annot=True, cmap='RdYlGn', fmt='.2f')
+    plt.title(f'Classification Report\n{os.path.basename(file)}')
+    plt.savefig(f'/home/zainab/Desktop/My_Project_Zainab/Result2/classification_report_{os.path.basename(file)}.png')
+    plt.close()
+
+    print(f"Saved confusion matrix and classification report for {file}")
