@@ -1,0 +1,33 @@
+import pandas as pd
+import os
+
+# Define your files and their labels
+files_to_combine = {
+    'Clear_Metrix_Evaluation.csv': 'Clear',
+    'SingleTone_Metrix_Evaluation.csv': 'SingleTone',
+    'Sweep_Metrix_Evaluation.csv':'Sweep',
+    'Gaussian_Metrix_Evaluation.csv':'Gaussian',
+}
+
+master_list = []
+
+for filename, label_value in files_to_combine.items():
+    if os.path.exists(filename):
+        df = pd.read_csv(filename)
+        
+        # Add the label (0, 1, 2, or 3)
+        df['Label'] = label_value
+        
+        master_list.append(df)
+        print(f"Successfully added {filename}")
+    else:
+        print(f"File not found: {filename}")
+
+if master_list:
+    # Stack all 4 files on top of each other
+    final_data = pd.concat(master_list, ignore_index=True)
+    
+    # CORRECTED PATH: The quotes now cover the whole path
+    output_path = '/home/zainab/Desktop/My_Project_Zainab/SamePower/Master_SamePower_Data.csv'
+    final_data.to_csv(output_path, index=False)
+    print(f"\n'{output_path}' created successfully!")
