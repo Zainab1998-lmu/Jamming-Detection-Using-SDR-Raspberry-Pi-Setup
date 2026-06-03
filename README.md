@@ -1,5 +1,7 @@
 # Jamming-Detection-Using-SDR-Raspberry-Pi-Setup
 
 
-This experiment focuses on developing a low-cost jamming detection system for uplink spacecraft communication by building hardware as part of the LMU CubeSat payload.
-To conduct this experiment successfully, two components must be prepared carefully: the hardware setup and the software setup.
+This repository implements a Decision Tree (DT) algorithm on the processed signal features and simulates the framework described in the thesis ‘Jamming Detection and Classification using Decision Trees for Resource‑Constrained Systems’.
+
+
+
