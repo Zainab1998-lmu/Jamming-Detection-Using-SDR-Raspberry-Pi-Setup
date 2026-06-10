@@ -52,4 +52,11 @@ From Trace Collection.py File:
 1. Establishes connection to the SDR client library (pyrtlsdr), applies hardware gain profiles, sets the sampling rates.
 2. validates structural output via multi-domain plotting (Time, Frequency via FFT, and Spectrogram displays).
 3. Automates data collection by capturing individual signal traces over short intervals, tracking the highest amplitudes across specified frequency bin regions. The system collects 500 traces per signal type across 9 distinct power variance scenarios. 
+<h1>Feature Extraction</h1>
+From the Feature Extraction File: 
 
+Generateing data matrices to extract 4 explicit operational markers from each spectrum trace to build the dataset:  
+1. Signal Power ($dB$)
+2. Noise Floor ($dB$)
+3. SNR ($dB$)
+4. Edge Frequency ($Hz$)  
