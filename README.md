@@ -43,3 +43,4 @@ The project is structured into two essential sections: the hardware setup config
 - numpy
 - pandas
 - matplotlib
+- pyrtlsdr
