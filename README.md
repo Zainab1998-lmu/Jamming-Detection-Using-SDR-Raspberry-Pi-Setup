@@ -46,5 +46,10 @@ The project is structured into two essential sections: the hardware setup config
 - pyrtlsdr
 - scikit-learn
 
-<h1>SDR connection + Incoming Signals Plotting + Traces Collection</h1> 
+<h1>SDR connection + Incoming Signals Plotting + Traces Collection</h1>
+From Trace Collection.py File: 
+
+1. Establishes connection to the SDR client library (pyrtlsdr), applies hardware gain profiles, sets the sampling rates.
+2. validates structural output via multi-domain plotting (Time, Frequency via FFT, and Spectrogram displays).
+3. Automates data collection by capturing individual signal traces over short intervals, tracking the highest amplitudes across specified frequency bin regions. The system collects 500 traces per signal type across 9 distinct power variance scenarios. 
 
