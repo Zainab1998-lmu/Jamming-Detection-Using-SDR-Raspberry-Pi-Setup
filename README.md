@@ -60,6 +60,15 @@ Generateing data matrices to extract 4 explicit operational markers from each sp
 2. Noise Floor ($dB$)
 3. SNR ($dB$)
 4. Edge Frequency ($Hz$)
-<h1>Labelling The classes</h1>
-
-Training Matrix Dataset FormulationStacks data entries sequentially and automatically maps integer target classifiers for supervised learning paths: 0: Clear, 1: Single-Tone, 2: Gaussian, 3: Sweep. The overall Python dataset features 14,000 distinct samples for model robustness evaluation.  5. Classifier Training & EvaluationTrains a DecisionTreeClassifier via scikit-learn. Evaluates tracking accuracy metrics through Python validation routines to export raw classification reports (Precision, Recall, F1 scores) and multi-class heatmapped confusion matrices. 
+<h1>Labeling The classes</h1>
+From Labeling The classes File: 
+Giving label for each signal types: 
+- Clear For Clear Signals.
+- SingleTone For Single Tone Jamming Signals.
+- Sweep For Sweep Jamming Signals.
+- Gaussian For Gaussian Jamming Signals. 
+<h1>Training The DT Algorithm</h1>
+From Training th 
+Training the model with 14,000 distinct samples. 
+<h1>Training The DT Algorithm</h1>
+Validating the model with new dataset, and exporting the classification reports (Precision, Recall, F1 scores) and multi-class heatmapped confusion matrices. 
