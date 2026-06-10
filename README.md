@@ -59,4 +59,7 @@ Generateing data matrices to extract 4 explicit operational markers from each sp
 1. Signal Power ($dB$)
 2. Noise Floor ($dB$)
 3. SNR ($dB$)
-4. Edge Frequency ($Hz$)  
+4. Edge Frequency ($Hz$)
+<h1>Labelling The classes</h1>
+
+Training Matrix Dataset FormulationStacks data entries sequentially and automatically maps integer target classifiers for supervised learning paths: 0: Clear, 1: Single-Tone, 2: Gaussian, 3: Sweep. The overall Python dataset features 14,000 distinct samples for model robustness evaluation.  5. Classifier Training & EvaluationTrains a DecisionTreeClassifier via scikit-learn. Evaluates tracking accuracy metrics through Python validation routines to export raw classification reports (Precision, Recall, F1 scores) and multi-class heatmapped confusion matrices. 
