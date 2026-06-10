@@ -7,8 +7,8 @@ This system is an economical jamming detection and classification system designe
 The system acts as a spectrum monitor to protect spacecraft uplink communications by identifying and classifying Radio Frequency (RF) interference.  
 <h1>Why This framework?</h1>
 This framework uses:
-- 1) A low-cost hardware.
-- 2) Processesing raw signal inputs and utilizing a Decision Tree (DT) Machine Learning classifier to categorize incoming signals into four distinct classes: Clear, Single-Tone Jamming, Gaussian Jamming, or Sweep Jamming. 
+1. A low-cost hardware.
+2. Processesing raw signal inputs and utilizing a Decision Tree (DT) Machine Learning classifier to categorize incoming signals into four distinct classes: Clear, Single-Tone Jamming, Gaussian Jamming, or Sweep Jamming. 
 
 The project is structured into two essential sections: the hardware setup configuration and the modular Python software pipeline. 
 <h1>The Hardware Setup</h1> 
