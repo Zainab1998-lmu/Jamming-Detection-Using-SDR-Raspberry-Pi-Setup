@@ -21,8 +21,8 @@ The project is structured into two essential sections: the hardware setup config
 
 <h1>Operational Parameters & Environment</h1> 
 
-The Center Frequency: 467.57069 MHz, 
-Testing Environment:  a well-controlled lab verificationby placing the receiving antenna and the jamming/source antennas in a fixed line-of-sight configuration to eliminate environmental fading discrepancies. 
+- The Center Frequency: 467.57069 MHz, 
+- Testing Environment:  a well-controlled lab verificationby placing the receiving antenna and the jamming/source antennas in a fixed line-of-sight configuration to eliminate environmental fading discrepancies. 
 
 <h1>The Python Implementation</h1>
 The entire pipeline is divided across 5 Python scripts.  
