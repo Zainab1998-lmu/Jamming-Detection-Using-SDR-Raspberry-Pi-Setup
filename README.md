@@ -62,13 +62,16 @@ Generateing data matrices to extract 4 explicit operational markers from each sp
 4. Edge Frequency ($Hz$)
 <h1>Labeling The classes</h1>
 From "Labeling The classes" File: 
-Giving label for each signal types: 
+
+Giving label for each signal types:
+
 - Clear For Clear Signals.
 - SingleTone For Single Tone Jamming Signals.
 - Sweep For Sweep Jamming Signals.
 - Gaussian For Gaussian Jamming Signals. 
 <h1>Training The DT Algorithm</h1>
-From "Training tDecision Tree algorithm" File.  
+From "Training tDecision Tree algorithm" File.
+
 Training the model with 14,000 distinct samples. 
 <h1>Decision Tree Validation</h1>
 Validating the model with new dataset, and exporting the classification reports (Precision, Recall, F1 scores) and multi-class heatmapped confusion matrices. 
