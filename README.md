@@ -45,3 +45,6 @@ The project is structured into two essential sections: the hardware setup config
 - matplotlib
 - pyrtlsdr
 - scikit-learn
+
+<h1>SDR connection + Incoming Signals Plotting + Traces Collection</h1> 
+
