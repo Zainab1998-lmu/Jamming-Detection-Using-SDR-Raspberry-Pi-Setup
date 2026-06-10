@@ -35,5 +35,6 @@ The project is structured into two essential sections: the hardware setup config
 - pip (Python package manager)
 - Git (for cloning the repository)
 <h3>Recommended Tools</h3>
+
 - VS Code or PyCharm (for code editing)
 - Terminal/Command Prompt (for running scripts)
