@@ -25,4 +25,7 @@ The project is structured into two essential sections: the hardware setup config
 - Testing Environment:  a well-controlled lab verificationby placing the receiving antenna and the jamming/source antennas in a fixed line-of-sight configuration to eliminate environmental fading discrepancies. 
 
 <h1>The Python Implementation</h1>
-The entire pipeline is divided across 5 Python scripts.  
+<h3>Prerequisites</h3>
+
+- Python 3.10+
+- Virtual environment (recommended)
