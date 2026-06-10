@@ -47,13 +47,13 @@ The project is structured into two essential sections: the hardware setup config
 - scikit-learn
 
 <h1>SDR connection + Incoming Signals Plotting + Traces Collection</h1>
-From Trace Collection.py File: 
+From "Trace Collection" File: 
 
 1. Establishes connection to the SDR client library (pyrtlsdr), applies hardware gain profiles, sets the sampling rates.
 2. validates structural output via multi-domain plotting (Time, Frequency via FFT, and Spectrogram displays).
 3. Automates data collection by capturing individual signal traces over short intervals, tracking the highest amplitudes across specified frequency bin regions. The system collects 500 traces per signal type across 9 distinct power variance scenarios. 
 <h1>Feature Extraction</h1>
-From the Feature Extraction File: 
+From the "Feature Extraction" File: 
 
 Generateing data matrices to extract 4 explicit operational markers from each spectrum trace to build the dataset:  
 1. Signal Power ($dB$)
@@ -61,14 +61,14 @@ Generateing data matrices to extract 4 explicit operational markers from each sp
 3. SNR ($dB$)
 4. Edge Frequency ($Hz$)
 <h1>Labeling The classes</h1>
-From Labeling The classes File: 
+From "Labeling The classes" File: 
 Giving label for each signal types: 
 - Clear For Clear Signals.
 - SingleTone For Single Tone Jamming Signals.
 - Sweep For Sweep Jamming Signals.
 - Gaussian For Gaussian Jamming Signals. 
 <h1>Training The DT Algorithm</h1>
-From Training th 
+From "Training tDecision Tree algorithm" File.  
 Training the model with 14,000 distinct samples. 
-<h1>Training The DT Algorithm</h1>
+<h1>Decision Tree Validation</h1>
 Validating the model with new dataset, and exporting the classification reports (Precision, Recall, F1 scores) and multi-class heatmapped confusion matrices. 
