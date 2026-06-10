@@ -39,6 +39,7 @@ The project is structured into two essential sections: the hardware setup config
 - VS Code or PyCharm (for code editing)
 - Terminal/Command Prompt (for running scripts)
 <h3>Install Dependencies</h3>
+
 - numpy
 - pandas
 - matplotlib
