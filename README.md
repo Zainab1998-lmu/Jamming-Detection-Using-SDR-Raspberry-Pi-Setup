@@ -13,10 +13,11 @@ This framework uses:
 
 The project is structured into two essential sections: the hardware setup configuration and the modular Python software pipeline. 
 <h1>The Hardware Setup</h1> 
-1) Raspberry Pi 4 Model B.
-2) SDR ReceiverNooElec NESDR SMArt v5.
-3) Receive Antenna. 
-4) Signal Jammer  Source.
+
+1. Raspberry Pi 4 Model B.
+2. SDR ReceiverNooElec NESDR SMArt v5.
+3. Receive Antenna. 
+4. Signal Jammer  Source.
 
 <h1>Operational Parameters & Environment</h1> 
 
