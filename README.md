@@ -29,3 +29,11 @@ The project is structured into two essential sections: the hardware setup config
 
 - Python 3.10+
 - Virtual environment (recommended)
+<h3>Required Software</h3>
+
+- Python 3.10+
+- pip (Python package manager)
+- Git (for cloning the repository)
+<h3>Recommended Tools</h3>
+- VS Code or PyCharm (for code editing)
+- Terminal/Command Prompt (for running scripts)
