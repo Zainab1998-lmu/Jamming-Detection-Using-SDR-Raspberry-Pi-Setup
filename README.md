@@ -44,3 +44,4 @@ The project is structured into two essential sections: the hardware setup config
 - pandas
 - matplotlib
 - pyrtlsdr
+- scikit-learn
