@@ -18,6 +18,7 @@ The project is structured into two essential sections: the hardware setup config
 2. SDR ReceiverNooElec NESDR SMArt v5.
 3. Receive Antenna. 
 4. Signal Jammer  Source.
+5. Walkie-Talkies
 
 <h1>Operational Parameters & Environment</h1> 
 
@@ -70,7 +71,7 @@ Giving label for each signal types:
 - Sweep For Sweep Jamming Signals.
 - Gaussian For Gaussian Jamming Signals. 
 <h1>Training The DT Algorithm</h1>
-From "Training tDecision Tree algorithm" File.
+From "Training the Decision Tree algorithm" File.
 
 Training the model with 14,000 distinct samples. 
 <h1>Decision Tree Validation</h1>
